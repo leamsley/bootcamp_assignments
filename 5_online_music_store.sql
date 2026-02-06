@@ -1,4 +1,4 @@
-WEEK 5 WORKSHOP | ONLINE MUSIC STORE
+-- WEEK 5 WORKSHOP | ONLINE MUSIC STORE
 
 -- 1. Basic Selection:
 
@@ -69,27 +69,27 @@ ORDER BY songs.popularity_score DESC;
 
 ---------------------------------------------
 
-Discussion Questions:
-
-1. Having two separate tables is beneficial because a stream doesn't equal a purchase. You can track revenue and engagement individually.
-
-2. Some ideas for business questions:
-	a. What artist has the most streamed songs?
-	b. What song has made the most revenue?
-	c. How does the premium membership affect the number of songs purchased?
-	d. What are the best performing genres in terms of streams and revenue?
-
-3. I would extend it to include:
-	a. Duration (in seconds) of time listened for each song (integer)
-	b. Song skipped (boolean)
-
-4. 
+-- Discussion Questions:
+--
+-- 1. Having two separate tables is beneficial because a stream doesn't equal a purchase. You can track revenue and engagement individually.
+--
+-- 2. Some ideas for business questions:
+-- 	a. What artist has the most streamed songs?
+-- 	b. What song has made the most revenue?
+-- 	c. How does the premium membership affect the number of songs purchased?
+-- 	d. What are the best performing genres in terms of streams and revenue?
+--
+-- 3. I would extend it to include:
+-- 	a. Duration (in seconds) of time listened for each song (integer)
+-- 	b. Song skipped (boolean)
+--
+-- 4.
 
 SELECT
-artists.artist_name,
-songs.title,
-songs.duration_seconds,
-songs.popularity_score
+    artists.artist_name,
+    songs.title,
+    songs.duration_seconds,
+    songs.popularity_score
 FROM songs
 LEFT JOIN artists
 ON songs.artist_id = artists.artist_id
